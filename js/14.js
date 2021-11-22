@@ -2,6 +2,15 @@
 const tecnologias = ['HTML', 'CSS', 'JavaScript', 'React', 'Node.js'];
 const numeros = [10, 20, 30];
 
+// .filter
+const nuevoArray = tecnologias.filter( function(tech) {
+    return tech !== 'HTML'
+})
+
+// A arrow function 
+// .filter
+const nuevoArray = tecnologias.filter( tech =>  tech !== 'HTML' )
+
 // Determina si un array incluye un elemento
 tecnologias.includes('HTML')
 
