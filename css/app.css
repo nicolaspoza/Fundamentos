@@ -30,3 +30,47 @@ header p a {
     text-decoration: none;
     color: #3B82F6;
 }
+
+.DOM {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+.DOM h2 {
+    color: #FFF;
+    text-align: center;
+
+}
+.DOM nav {
+
+}
+.DOM nav a {
+    color: #FFF;
+    font-size: 20px;
+    text-decoration: none;
+    margin-right: 10px;
+}
+.DOM p {
+    color: #2563EB;
+    font-size: 20px;
+}
+
+.DOM #formulario {
+    max-width: 500px;
+    margin: 0 auto;
+}
+.DOM #formulario input {
+    display: block;
+    width: 100%;
+    border: none;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.DOM #formulario input[type="submit"] {
+    background-color: #2563EB;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #FFF;
+}
