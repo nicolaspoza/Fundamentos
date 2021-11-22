@@ -45,7 +45,6 @@ if(numero1 == numero2) {
 // Comprobando un true
 
 const autenticado = true
-
 if(autenticado === true) {
     console.log('Si esta autenticado')
 }
