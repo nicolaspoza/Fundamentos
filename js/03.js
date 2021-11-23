@@ -20,3 +20,12 @@ const { nombre, precio, disponible } = producto
 console.log(nombre)
 console.log(precio)
 console.log(disponible)
+
+// Object Literal enhacement...
+const autenticado = true
+const usuario = 'Juan'
+
+const nuevoObjeto = {
+    autenticado: autenticado,
+    usuario: usuario
+}
