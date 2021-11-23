@@ -1,5 +1,4 @@
 // Unir 2 objetos
-
 const producto = {
     nombre: 'Tablet',
     precio: 300,
@@ -19,7 +18,4 @@ const nuevoObjeto2 = {
     producto: {...producto},
     cliente: {...cliente}
 }
-
-
-
 console.log(nuevoObjeto3)
