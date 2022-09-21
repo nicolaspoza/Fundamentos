@@ -1,31 +1,34 @@
-// Múltiples Awaits 
-const url = "http://localhost:3000/productos";
-const url2 = 'https://jsonplaceholder.typicode.com/comments'
 
 
-async function consultarAPI() {
-    const inicio = performance.now()
+const formulario = document.querySelector('#formulario')
+formulario.addEventListener('submit', e => {
+    e.preventDefault() // Permite validar el formulario 
 
+    const nombre = document.querySelector('.nombre').value
+    const password = document.querySelector('.password').value
+    // console.log(nombre)
+    // console.log(password)
 
-    const [ respuesta, respuesta2 ] = await  Promise.all( [ fetch(url), fetch(url2) ] )
-
-//    const respuesta = await fetch(url);
-    console.log(respuesta)
-
-
-//    const respuesta2 = await fetch(url2);
-    console.log(respuesta2)
-
-    const resultado = await respuesta.json()
-    const resultado2 = await respuesta2.json()
+    const alertaPrevia = document.querySelector('.alerta')
+    if(alertaPrevia){
+        alertaPrevia.remove()
+    }
+    const alerta = document.createElement('DIV')
+    alerta.classList.add('alerta')
     
-    console.log(resultado)
-    console.log(resultado2)
+    // console.log(alerta)
 
-    const fin = performance.now()
 
-    console.log(`Ejecución ${fin - inicio} ms`)
-
-}
-consultarAPI()
-
+    if(nombre === '' || password === '') {
+        // console.log('Todos los campos son obligatorios')
+        alerta.textContent = 'Todos los campos son obligatorios'
+        alerta.classList.add('error')
+    } else {
+        alerta.textContent = 'Todo bien...'
+        alerta.classList.add('exito')
+        // console.log('Todo bien, enviando...')
+    }
+    // console.log('Enviaste formulario')
+    // console.log(alerta)
+    formulario.appendChild(alerta)
+})

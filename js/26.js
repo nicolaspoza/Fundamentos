@@ -1,23 +1,18 @@
-// Async Await 
+// Evento del DOM - Submit 
 
-const url = "http://localhost:3000/productos";
+const formulario = document.querySelector('#formulario')
+formulario.addEventListener('submit', e => {
+    e.preventDefault() // Permite validar el formulario 
 
-fetch(url)
-    .then( respuesta => respuesta.json())
-    .then( resultado => {
-        console.log(resultado[0])
-        resultado.forEach(producto =>  console.log(producto))
-    })
+    const nombre = document.querySelector('.nombre').value
+    const password = document.querySelector('.password').value
+    // console.log(nombre)
+    // console.log(password)
 
-async function consultarAPI() {
-    const respuesta = await fetch(url)
-    const resultado = await respuesta.json()
-    console.log(resultado)
-}
-
-const consultarAPI = async () => {
-    const respuesta = await fetch(url)
-    const resultado = await respuesta.json()
-    console.log(resultado)
-}
-consultarAPI();
+    if(nombre === '' || password === '') {
+        console.log('Todos los campos son obligatorios')
+    } else {
+        console.log('Todo bien, enviando...')
+    }
+    // console.log('Enviaste formulario')
+})

@@ -1,10 +1,17 @@
-// Fetch API 
+// Eventos del DOM - Inputs
 
-const url = "http://localhost:3000/productos";
+const inputNombre = document.querySelector('.nombre')
+inputNombre.addEventListener('input', function(e) {
+    console.log(e.target.value)
+})
 
-fetch(url)
-    .then( respuesta => respuesta.json())
-    .then( resultado => {
-        console.log(resultado[0])
-        resultado.forEach(producto =>  console.log(producto))
-    })
+const inputPassword = document.querySelector('.password')
+inputPassword.addEventListener('input',functionPassword)
+
+function functionPassword(e) {
+    inputPassword.type = 'text'
+
+    setTimeout(() => {
+        inputPassword.type = 'password' //timeout permite modificar tiempo en el que se muestra o se oculta
+    }, 50);
+}
